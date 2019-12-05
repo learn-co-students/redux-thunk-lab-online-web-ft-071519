@@ -13,15 +13,10 @@ class App extends Component {
   
   handleLoading = () => {
     console.log(this.props.loading)
-    if(this.props.loading) {
-      return <div>Loading...</div>
-    } else {
-      return <CatList catPics={this.props.catPics} />
-    }
+    return (this.props.loading ? <div>Loading...</div> : <CatList catPics={this.props.catPics} />)
   }
 
-
-  render() {
+    render() {
     // console.log(this.props.cats) //pattern 1
     // console.log(this.props.loading) //pattern 1
     console.log(this.props.catPics)
