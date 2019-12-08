@@ -17,7 +17,7 @@ class App extends Component {
 
 
    render() {
-      console.log(this.props.catPics) // log will fire every time App renders
+      console.log("App.js", this.props.catPics) // log will fire every time App renders
       return (
          <div className="App">
             <h1>CatBook</h1>

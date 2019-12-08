@@ -4,11 +4,15 @@ Build out the reducer. Add cases as you build.
 The Reducer:
 1. Sets the initial state of the app.
 2. Is a function that uses switch statements to determine which block of code to activate. Its purpose and return values change the state/store of the app. Changes in state will cause a re-render and therefore update the browser window based on the information in state.
+
+3. 
 */
 
 const catsReducer = (state = { cats: [], loading: false }, action) => {
+    console.log("catsReducer.js")
     switch (action.type) {
         case 'LOADING_CATS':
+            // debugger
             return {
                 ...state,
                 cats: [...state.cats],

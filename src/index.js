@@ -22,6 +22,8 @@ import thunk from 'redux-thunk'
 const store = createStore(catsReducer, applyMiddleware(thunk))
 
 // Make sure to use all classes and functions imported in.
+console.log("index.js")
+
 ReactDOM.render(
     // Provides access to the store to all the children of App.
     <Provider store={store}>
