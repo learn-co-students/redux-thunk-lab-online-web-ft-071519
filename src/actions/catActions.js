@@ -11,4 +11,14 @@ const fetchCats = () => {
     }
 }
 
+// const test = () => {
+//     console.log("test")
+// }
+
+// const API = {fetchCats, test};
+
+// console.log(API)
+// console.log(API.fetchCats)
+
 export { fetchCats }
+// export { API }

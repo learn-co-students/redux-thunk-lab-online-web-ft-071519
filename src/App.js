@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { fetchCats } from './actions/catActions';
+// import { API } from './actions/catActions'
 import CatList from './CatList'
 
 class App extends Component { 
@@ -8,6 +9,7 @@ class App extends Component {
   componentDidMount(){
     console.log(this.props)
     this.props.fetchCats()
+    // this.props.API.fetchCats()
   };
 
   
@@ -17,8 +19,6 @@ class App extends Component {
   }
 
     render() {
-    // console.log(this.props.cats) //pattern 1
-    // console.log(this.props.loading) //pattern 1
     console.log(this.props.catPics)
     console.log(this.props.loading)
     return (
@@ -31,16 +31,17 @@ class App extends Component {
 }
 
 
-// export default connect(state => state, {fetchCats})(App) //pattern 1
 
-const mapDispatchToProps = state => {
+
+const mapStateToProps = state => {
   return {
     catPics: state.cats,
     loading: state.loading
   }
 }
 
-export default connect(mapDispatchToProps, { fetchCats })(App)
+export default connect(mapStateToProps, { fetchCats })(App)
+// export default connect(mapStateToProps, { API })(App)
 
 
 
